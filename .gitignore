@@ -1,41 +1,131 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# OSX
+.DS_Store
 
-# dependencies
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+
+# Node
 node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# 注意：package-lock.json 建议提交以保证团队依赖一致性
+# 如果你的团队使用 yarn，则忽略 package-lock.json
+# package-lock.json
 
 # Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
-expo-env.d.ts
 
-# Native
-.kotlin/
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# Bundle artifacts
+*.jsbundle
 
-# Metro
+# CocoaPods
+/ios/Pods/
+Podfile.lock
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.swp
+*.swo
+*~
+.idea/
+
+# VS Code（保留团队配置）
+# .vscode/ 目录包含团队共享的配置，应该提交
+# 如果有个人配置，请添加到 .git/info/exclude
+
+# iOS/Android 原生项目（由 expo prebuild 自动生成）
+# 如果使用 Expo 管理模式，这些文件夹应该被忽略
+# 如果使用原生构建（bare workflow），应该提交这些文件
+/ios/
+/android/
+
+# 但保留这些配置文件（如果你需要自定义原生配置）
+# !/ios/Podfile
+# !/ios/todolistios/Info.plist
+# !/android/app/build.gradle
+# !/android/app/src/main/AndroidManifest.xml
+
+# Metro bundler cache
 .metro-health-check*
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# Debug
+*.log
 
 # macOS
-.DS_Store
-*.pem
+.AppleDouble
+.LSOverride
 
-# local env files
-.env*.local
+# Thumbnails
+._*
 
-# typescript
+# Test coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Editor backup files
+*~
+*.swp
+*.swo
+.vscode/*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Ignore personal notes
+NOTES.md
+TODO.personal.md
+
+# EAS (Expo Application Services)
+.eas/
+eas.json
+
+# TypeScript cache
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Lock files (choose one based on your package manager)
+# Uncomment the one you DON'T use:
+# yarn.lock      # If using npm
+# package-lock.json   # If using yarn
+# pnpm-lock.yaml # If using npm/yarn
